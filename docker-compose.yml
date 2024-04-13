@@ -6,7 +6,7 @@ services:
       - SYS_NICE
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: mysql-env@140
+      MYSQL_ROOT_PASSWORD: sFg$8d7QW@sd
     ports:
       - 3306:3306
     expose:

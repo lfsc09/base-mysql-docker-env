@@ -1,4 +1,4 @@
-CREATE USER 'user'@'localhost' IDENTIFIED BY 'sFg$8d7QW@sd';
+CREATE USER 'user'@'localhost' IDENTIFIED BY 'mysql-env@140';
 
 GRANT
     ALTER,
