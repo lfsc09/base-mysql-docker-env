@@ -1,21 +1,18 @@
 services:
   mysql:
     image: mysql:latest
-    container_name: 'Mysql Env'
+    container_name: 'Mysql-Shared'
     cap_add:
       - SYS_NICE
     restart: always
     environment:
-      - MYSQL_ROOT_PASSWORD='mysql-env@140'
-      - MYSQL_USER='user'
-      - MYSQL_PASSWORD=''
-    command: 
+      MYSQL_ROOT_PASSWORD: mysql-env@140
     ports:
       - 3306:3306
     expose:
       - 3306
     volumes:
-      - mysql-datavolume:/var/lib/mysql
+      - ./mysql-datavolume:/var/lib/mysql
       - ./init-setup.sql:/docker-entrypoint-initdb.d/init.sql
 volumes:
-  mysql-datavolume:
+  mysql-datavolume: 
