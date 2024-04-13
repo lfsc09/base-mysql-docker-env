@@ -13,6 +13,8 @@ services:
       - 3306
     volumes:
       - ./mysql-datavolume:/var/lib/mysql
+      - ./mysql-filevolume:/filevolume
       - ./init-setup.sql:/docker-entrypoint-initdb.d/init.sql
 volumes:
   mysql-datavolume: 
+  mysql-filevolume: 
