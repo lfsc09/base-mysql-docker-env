@@ -1,4 +1,5 @@
 CREATE USER 'user'@'localhost' IDENTIFIED BY 'mysql-env@140';
+CREATE USER 'user'@'172.%' IDENTIFIED BY 'mysql-env@140';
 
 GRANT
     ALTER,
@@ -24,6 +25,6 @@ GRANT
     SHOW VIEW,
     TRIGGER,
     UPDATE
-ON *.* TO 'user'@'localhost';
+ON *.* TO 'user'@'localhost', 'user'@'172.%';
 
 FLUSH PRIVILEGES;
