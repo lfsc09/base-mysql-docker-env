@@ -1,3 +1,4 @@
+version: '3.8'
 services:
   mysql:
     image: mysql:latest
@@ -8,13 +9,9 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: sFg$8d7QW@sd
     ports:
-      - 3306:3306
-    expose:
-      - 3306
+      - '3306:3306'
     volumes:
       - ./mysql-datavolume:/var/lib/mysql
       - ./mysql-filevolume:/filevolume
       - ./init-setup.sql:/docker-entrypoint-initdb.d/init.sql
-volumes:
-  mysql-datavolume: 
-  mysql-filevolume: 
+      
